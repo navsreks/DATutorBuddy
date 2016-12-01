@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94071DEFA80800453A98 /* AppDelegate.swift */; };
+		C2FA940D1DEFA80800453A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FA940B1DEFA80800453A98 /* Main.storyboard */; };
+		C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2FA940E1DEFA80800453A98 /* DATutorBuddy.xcdatamodeld */; };
+		C2FA94121DEFA80800453A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2FA94111DEFA80800453A98 /* Assets.xcassets */; };
+		C2FA94151DEFA80800453A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */; };
+		C2FA94201DEFA80800453A98 /* DATutorBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA941F1DEFA80800453A98 /* DATutorBuddyTests.swift */; };
+		C2FA942B1DEFA80800453A98 /* DATutorBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA942A1DEFA80800453A98 /* DATutorBuddyUITests.swift */; };
+		C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */; };
+		C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */; };
+		C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */; };
+		C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2FA941C1DEFA80800453A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2FA93FC1DEFA80700453A98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2FA94031DEFA80800453A98;
+			remoteInfo = DATutorBuddy;
+		};
+		C2FA94271DEFA80800453A98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2FA93FC1DEFA80700453A98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2FA94031DEFA80800453A98;
+			remoteInfo = DATutorBuddy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2FA94041DEFA80800453A98 /* DATutorBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DATutorBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2FA94071DEFA80800453A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2FA940C1DEFA80800453A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2FA940F1DEFA80800453A98 /* DATutorBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DATutorBuddy.xcdatamodel; sourceTree = "<group>"; };
+		C2FA94111DEFA80800453A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2FA94141DEFA80800453A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2FA94161DEFA80800453A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FA941B1DEFA80800453A98 /* DATutorBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DATutorBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2FA941F1DEFA80800453A98 /* DATutorBuddyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATutorBuddyTests.swift; sourceTree = "<group>"; };
+		C2FA94211DEFA80800453A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FA94261DEFA80800453A98 /* DATutorBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DATutorBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2FA942A1DEFA80800453A98 /* DATutorBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DATutorBuddyUITests.swift; sourceTree = "<group>"; };
+		C2FA942C1DEFA80800453A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewController.swift; sourceTree = "<group>"; };
+		C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
+		C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
+		C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2FA94011DEFA80800453A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94181DEFA80800453A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94231DEFA80800453A98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2FA93FB1DEFA80700453A98 = {
+			isa = PBXGroup;
+			children = (
+				C2FA94061DEFA80800453A98 /* DATutorBuddy */,
+				C2FA941E1DEFA80800453A98 /* DATutorBuddyTests */,
+				C2FA94291DEFA80800453A98 /* DATutorBuddyUITests */,
+				C2FA94051DEFA80800453A98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2FA94051DEFA80800453A98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA94041DEFA80800453A98 /* DATutorBuddy.app */,
+				C2FA941B1DEFA80800453A98 /* DATutorBuddyTests.xctest */,
+				C2FA94261DEFA80800453A98 /* DATutorBuddyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2FA94061DEFA80800453A98 /* DATutorBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA94071DEFA80800453A98 /* AppDelegate.swift */,
+				C2FA940B1DEFA80800453A98 /* Main.storyboard */,
+				C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */,
+				C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */,
+				C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */,
+				C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */,
+				C2FA94111DEFA80800453A98 /* Assets.xcassets */,
+				C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */,
+				C2FA94161DEFA80800453A98 /* Info.plist */,
+				C2FA940E1DEFA80800453A98 /* DATutorBuddy.xcdatamodeld */,
+			);
+			path = DATutorBuddy;
+			sourceTree = "<group>";
+		};
+		C2FA941E1DEFA80800453A98 /* DATutorBuddyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA941F1DEFA80800453A98 /* DATutorBuddyTests.swift */,
+				C2FA94211DEFA80800453A98 /* Info.plist */,
+			);
+			path = DATutorBuddyTests;
+			sourceTree = "<group>";
+		};
+		C2FA94291DEFA80800453A98 /* DATutorBuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2FA942A1DEFA80800453A98 /* DATutorBuddyUITests.swift */,
+				C2FA942C1DEFA80800453A98 /* Info.plist */,
+			);
+			path = DATutorBuddyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2FA94031DEFA80800453A98 /* DATutorBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2FA942F1DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddy" */;
+			buildPhases = (
+				C2FA94001DEFA80800453A98 /* Sources */,
+				C2FA94011DEFA80800453A98 /* Frameworks */,
+				C2FA94021DEFA80800453A98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DATutorBuddy;
+			productName = DATutorBuddy;
+			productReference = C2FA94041DEFA80800453A98 /* DATutorBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2FA941A1DEFA80800453A98 /* DATutorBuddyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2FA94321DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyTests" */;
+			buildPhases = (
+				C2FA94171DEFA80800453A98 /* Sources */,
+				C2FA94181DEFA80800453A98 /* Frameworks */,
+				C2FA94191DEFA80800453A98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2FA941D1DEFA80800453A98 /* PBXTargetDependency */,
+			);
+			name = DATutorBuddyTests;
+			productName = DATutorBuddyTests;
+			productReference = C2FA941B1DEFA80800453A98 /* DATutorBuddyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2FA94251DEFA80800453A98 /* DATutorBuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2FA94351DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyUITests" */;
+			buildPhases = (
+				C2FA94221DEFA80800453A98 /* Sources */,
+				C2FA94231DEFA80800453A98 /* Frameworks */,
+				C2FA94241DEFA80800453A98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2FA94281DEFA80800453A98 /* PBXTargetDependency */,
+			);
+			name = DATutorBuddyUITests;
+			productName = DATutorBuddyUITests;
+			productReference = C2FA94261DEFA80800453A98 /* DATutorBuddyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2FA93FC1DEFA80700453A98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = DeAnza;
+				TargetAttributes = {
+					C2FA94031DEFA80800453A98 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					C2FA941A1DEFA80800453A98 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C2FA94031DEFA80800453A98;
+					};
+					C2FA94251DEFA80800453A98 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C2FA94031DEFA80800453A98;
+					};
+				};
+			};
+			buildConfigurationList = C2FA93FF1DEFA80700453A98 /* Build configuration list for PBXProject "DATutorBuddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2FA93FB1DEFA80700453A98;
+			productRefGroup = C2FA94051DEFA80800453A98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2FA94031DEFA80800453A98 /* DATutorBuddy */,
+				C2FA941A1DEFA80800453A98 /* DATutorBuddyTests */,
+				C2FA94251DEFA80800453A98 /* DATutorBuddyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2FA94021DEFA80800453A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FA94151DEFA80800453A98 /* LaunchScreen.storyboard in Resources */,
+				C2FA94121DEFA80800453A98 /* Assets.xcassets in Resources */,
+				C2FA940D1DEFA80800453A98 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94191DEFA80800453A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94241DEFA80800453A98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2FA94001DEFA80800453A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */,
+				C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */,
+				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
+				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
+				C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */,
+				C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94171DEFA80800453A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FA94201DEFA80800453A98 /* DATutorBuddyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FA94221DEFA80800453A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2FA942B1DEFA80800453A98 /* DATutorBuddyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2FA941D1DEFA80800453A98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2FA94031DEFA80800453A98 /* DATutorBuddy */;
+			targetProxy = C2FA941C1DEFA80800453A98 /* PBXContainerItemProxy */;
+		};
+		C2FA94281DEFA80800453A98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2FA94031DEFA80800453A98 /* DATutorBuddy */;
+			targetProxy = C2FA94271DEFA80800453A98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2FA940B1DEFA80800453A98 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2FA940C1DEFA80800453A98 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2FA94141DEFA80800453A98 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2FA942D1DEFA80800453A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2FA942E1DEFA80800453A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2FA94301DEFA80800453A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DATutorBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2FA94311DEFA80800453A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DATutorBuddy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C2FA94331DEFA80800453A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DATutorBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DATutorBuddy.app/DATutorBuddy";
+			};
+			name = Debug;
+		};
+		C2FA94341DEFA80800453A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DATutorBuddyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DATutorBuddy.app/DATutorBuddy";
+			};
+			name = Release;
+		};
+		C2FA94361DEFA80800453A98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DATutorBuddyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DATutorBuddy;
+			};
+			name = Debug;
+		};
+		C2FA94371DEFA80800453A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DATutorBuddyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.deanza.navyar.DATutorBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DATutorBuddy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2FA93FF1DEFA80700453A98 /* Build configuration list for PBXProject "DATutorBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FA942D1DEFA80800453A98 /* Debug */,
+				C2FA942E1DEFA80800453A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2FA942F1DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FA94301DEFA80800453A98 /* Debug */,
+				C2FA94311DEFA80800453A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2FA94321DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FA94331DEFA80800453A98 /* Debug */,
+				C2FA94341DEFA80800453A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C2FA94351DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2FA94361DEFA80800453A98 /* Debug */,
+				C2FA94371DEFA80800453A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2FA940E1DEFA80800453A98 /* DATutorBuddy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2FA940F1DEFA80800453A98 /* DATutorBuddy.xcdatamodel */,
+			);
+			currentVersion = C2FA940F1DEFA80800453A98 /* DATutorBuddy.xcdatamodel */;
+			path = DATutorBuddy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C2FA93FC1DEFA80700453A98 /* Project object */;
+}
