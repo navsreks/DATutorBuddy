@@ -18,6 +18,7 @@
 		C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */; };
 		C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */; };
 		C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */; };
+		C2FA94411DF0FB1600453A98 /* TutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
 		C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
+		C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				C2FA94071DEFA80800453A98 /* AppDelegate.swift */,
 				C2FA940B1DEFA80800453A98 /* Main.storyboard */,
+				C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */,
 				C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */,
 				C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */,
 				C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */,
+				C2FA94411DF0FB1600453A98 /* TutorDetailViewController.swift in Sources */,
 				C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */,
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
@@ -498,6 +502,7 @@
 				C2FA94311DEFA80800453A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2FA94321DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +511,7 @@
 				C2FA94341DEFA80800453A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2FA94351DEFA80800453A98 /* Build configuration list for PBXNativeTarget "DATutorBuddyUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +520,7 @@
 				C2FA94371DEFA80800453A98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
