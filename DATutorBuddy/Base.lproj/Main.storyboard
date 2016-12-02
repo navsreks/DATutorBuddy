@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--CLASSES-->
@@ -21,16 +22,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udX-4a-CzV">
-                                            <rect key="frame" x="21" y="47" width="280" height="37"/>
-                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-tg-fJJ">
+                                            <rect key="frame" x="72" y="8" width="224" height="37"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
                                             <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-tg-fJJ">
-                                            <rect key="frame" x="16" y="8" width="290" height="37"/>
-                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udX-4a-CzV">
+                                            <rect key="frame" x="72" y="46" width="224" height="37"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="21"/>
                                             <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,19 +164,64 @@
         <!--Root View Controller-->
         <scene sceneID="h68-B2-sAl">
             <objects>
-                <tableViewController id="xSj-Gn-Y53" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KLQ-Vj-NT3">
+                <tableViewController id="xSj-Gn-Y53" customClass="AllTuteeViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="28" sectionFooterHeight="28" id="KLQ-Vj-NT3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9Rc-xX-NaE">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TuteeCell" rowHeight="145" id="9Rc-xX-NaE" customClass="AllTuteeTableViewCell" customModule="DATutorBuddy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Rc-xX-NaE" id="38X-Un-mgP">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-cx-fhf">
+                                            <rect key="frame" x="160" y="19" width="101" height="32"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-ku-cdu">
+                                            <rect key="frame" x="65" y="8" width="87" height="43"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="38"/>
+                                            <color key="textColor" red="0.95590641361256545" green="0.30845944323414487" blue="0.28414540515516734" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Fx-Spf">
+                                            <rect key="frame" x="189" y="65" width="54" height="25"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-EV-KTl">
+                                            <rect key="frame" x="51" y="61" width="114" height="34"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OuI-EV-KTl" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="43" id="4i4-bw-PUr"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yHo-cx-fhf" secondAttribute="trailing" constant="51" id="8Hh-bd-VIJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tca-Fx-Spf" secondAttribute="trailing" constant="69" id="8Ny-KU-YAJ"/>
+                                        <constraint firstItem="OuI-EV-KTl" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="43" id="9OT-gh-Jcd"/>
+                                        <constraint firstItem="OuI-EV-KTl" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="43" id="Do0-te-JO5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tca-Fx-Spf" secondAttribute="trailing" constant="69" id="LRx-AE-GEx"/>
+                                        <constraint firstItem="OuI-EV-KTl" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="43" id="kB1-I0-7kR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yHo-cx-fhf" secondAttribute="trailing" constant="51" id="kRd-Bf-2b9"/>
+                                        <constraint firstItem="tvN-ku-cdu" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="57" id="kbx-A9-gbp"/>
+                                        <constraint firstItem="tvN-ku-cdu" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="57" id="oAH-wW-Glu"/>
+                                        <constraint firstItem="tvN-ku-cdu" firstAttribute="leading" secondItem="38X-Un-mgP" secondAttribute="leadingMargin" constant="57" id="vYQ-7n-qcm"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="className" destination="tvN-ku-cdu" id="VT6-hX-NTS"/>
+                                    <outlet property="locName" destination="OuI-EV-KTl" id="OPu-8a-hrK"/>
+                                    <outlet property="name" destination="yHo-cx-fhf" id="qv0-2I-hBR"/>
+                                    <outlet property="time" destination="Tca-Fx-Spf" id="UgS-ZW-0S1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

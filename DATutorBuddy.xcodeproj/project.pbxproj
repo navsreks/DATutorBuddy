@@ -19,6 +19,8 @@
 		C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */; };
 		C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */; };
 		C2FA94411DF0FB1600453A98 /* TutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */; };
+		F346C5661DF2080500240947 /* AllTuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346C5651DF2080500240947 /* AllTuteeViewController.swift */; };
+		F346C5681DF2094700240947 /* AllTuteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
 		C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
 		C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorDetailViewController.swift; sourceTree = "<group>"; };
+		F346C5651DF2080500240947 /* AllTuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTuteeViewController.swift; sourceTree = "<group>"; };
+		F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTuteeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				C2FA94071DEFA80800453A98 /* AppDelegate.swift */,
 				C2FA940B1DEFA80800453A98 /* Main.storyboard */,
+				F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */,
+				F346C5651DF2080500240947 /* AllTuteeViewController.swift */,
 				C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */,
 				C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */,
 				C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */,
@@ -277,7 +283,9 @@
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
 				C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */,
+				F346C5661DF2080500240947 /* AllTuteeViewController.swift in Sources */,
 				C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */,
+				F346C5681DF2094700240947 /* AllTuteeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

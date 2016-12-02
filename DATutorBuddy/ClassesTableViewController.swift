@@ -11,7 +11,7 @@ import UIKit
 class ClassesTableViewController: UITableViewController {
 
     var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C"]
-    var Description = ["iOS Development", "Java", "C++", "CIS 22B", "CIS 22C"]
+    var Description = ["iOS Development", "Java", "Beginning C++", "Intermediate C++", "Data Structures"]
     var Check = [false, false, false, false, false]
     var cellIndex : Int!
 
@@ -63,14 +63,7 @@ class ClassesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedItem = Classes[indexPath.row]
         
-        Check[indexPath.row] = !(Check[indexPath.row])
-        cellIndex = indexPath.row
-        if (Check[indexPath.row]){
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .DisclosureIndicator
-        }
-        else {
-            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
-        }
+        self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .DisclosureIndicator
         
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
