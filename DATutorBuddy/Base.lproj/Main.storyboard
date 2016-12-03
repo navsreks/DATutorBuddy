@@ -239,11 +239,11 @@
             </objects>
             <point key="canvasLocation" x="396" y="1262"/>
         </scene>
-        <!--Item-->
+        <!--LIST-->
         <scene sceneID="YIU-UE-2I4">
             <objects>
                 <navigationController id="5hB-G6-eSy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2At-vu-3aO"/>
+                    <tabBarItem key="tabBarItem" title="LIST" image="clkist" id="2At-vu-3aO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v8f-46-AP3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -256,7 +256,7 @@
             </objects>
             <point key="canvasLocation" x="-249" y="1262"/>
         </scene>
-        <!--Item 1-->
+        <!--APPT.-->
         <scene sceneID="kQQ-rI-L5c">
             <objects>
                 <viewController id="odQ-7l-Okz" sceneMemberID="viewController">
@@ -269,11 +269,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Gj0-lI-kI0"/>
+                    <tabBarItem key="tabBarItem" title="APPT." image="appt" id="Gj0-lI-kI0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgm-uO-MlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="-605"/>
+            <point key="canvasLocation" x="-231" y="2127"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="rKs-CS-gTd">
@@ -322,20 +322,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="odQ-7l-Okz" kind="relationship" relationship="viewControllers" id="UcT-pe-umI"/>
                         <segue destination="egS-Dq-b4A" kind="relationship" relationship="viewControllers" id="pyW-hC-1qb"/>
                         <segue destination="5hB-G6-eSy" kind="relationship" relationship="viewControllers" id="fca-Dh-ebw"/>
+                        <segue destination="odQ-7l-Okz" kind="relationship" relationship="viewControllers" id="UcT-pe-umI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXo-qr-j8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-806" y="335"/>
+            <point key="canvasLocation" x="-792" y="333"/>
         </scene>
-        <!--Item-->
+        <!--CLASS-->
         <scene sceneID="mJ8-1G-C41">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="egS-Dq-b4A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zJ5-m2-6JT"/>
+                    <tabBarItem key="tabBarItem" title="CLASS" image="class" id="zJ5-m2-6JT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WFR-lT-feO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -352,6 +352,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appt" width="35" height="35"/>
         <image name="bg.jpg" width="16" height="16"/>
+        <image name="class" width="35" height="35"/>
+        <image name="clkist" width="35" height="35"/>
     </resources>
 </document>
