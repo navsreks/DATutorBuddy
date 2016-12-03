@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ibE-hZ-Ht0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Stj-vQ-QuW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--CLASSES-->
+        <!--Which class do you need help in?-->
         <scene sceneID="3be-Nz-Q4p">
             <objects>
                 <tableViewController id="dVd-48-id7" customClass="ClassesTableViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Ck-ee-DBA" id="SPq-Rb-GKM">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="91"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="91.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-tg-fJJ">
@@ -50,13 +50,13 @@
                             <outlet property="delegate" destination="dVd-48-id7" id="JgC-ud-6ys"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="CLASSES" id="cL2-Wm-B5T"/>
+                    <navigationItem key="navigationItem" title="Which class do you need help in?" id="cL2-Wm-B5T"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcm-aG-lky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="403" y="335"/>
         </scene>
-        <!--TO BE TUTORED-->
+        <!--Add yourself to the list-->
         <scene sceneID="ADi-8I-7D3">
             <objects>
                 <tableViewController id="u3d-Cr-RJp" customClass="TutorTableViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbl-LN-1W1" id="eCb-OY-VMJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="98"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="98.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-k3-tFc">
@@ -98,13 +98,13 @@
                             <outlet property="delegate" destination="u3d-Cr-RJp" id="fVm-0l-Vr8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TO BE TUTORED" id="QVP-MY-o40"/>
+                    <navigationItem key="navigationItem" title="Add yourself to the list" id="QVP-MY-o40"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZT-Xq-egd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="333"/>
         </scene>
-        <!--ADD TO LIST-->
+        <!--Where we can find you?-->
         <scene sceneID="B1t-mz-YkX">
             <objects>
                 <viewController id="psD-ey-BBa" customClass="TutorDetailViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,22 +140,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ADD TO LIST" id="DiH-wC-8th">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="RAh-dH-KBs">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zHW-9e-I4R">
-                                <rect key="frame" x="16" y="7" width="64" height="30"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Where we can find you?" id="DiH-wC-8th">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="XlX-io-DOQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zKx-Ua-0kM">
+                                <rect key="frame" x="16" y="7" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="CANCEL"/>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Wn6-cI-Mje">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YUx-9N-WOZ">
-                                <rect key="frame" x="258" y="7" width="46" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="UpT-iX-2bJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cuC-p9-cSQ">
+                                <rect key="frame" x="268" y="6" width="36" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="SAVE"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx9-41-NHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +178,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Rc-xX-NaE" id="38X-Un-mgP">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="144.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-cx-fhf">
@@ -271,10 +275,47 @@
             </objects>
             <point key="canvasLocation" x="-263" y="-605"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="rKs-CS-gTd">
+            <objects>
+                <viewController id="Stj-vQ-QuW" customClass="HomeViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tb5-DO-f6w"/>
+                        <viewControllerLayoutGuide type="bottom" id="enb-Uc-b35"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2qJ-E5-gUM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-wR-DPL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOO-9I-H45">
+                                <rect key="frame" x="105" y="370" width="111" height="30"/>
+                                <state key="normal" title="GET STARTED"/>
+                                <connections>
+                                    <segue destination="ibE-hZ-Ht0" kind="modal" modalTransitionStyle="flipHorizontal" id="Z3U-e5-sH8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME TO                       DA TUTOR BUDDY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l5-MA-N3a">
+                                <rect key="frame" x="39" y="61" width="240" height="225"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JlQ-xI-S33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1187" y="333"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lrm-cF-Q1s">
             <objects>
                 <tabBarController id="ibE-hZ-Ht0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DKX-uo-eVo"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="N5p-Xc-PVT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -310,4 +351,7 @@
             <point key="canvasLocation" x="-249" y="333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.jpg" width="16" height="16"/>
+    </resources>
 </document>

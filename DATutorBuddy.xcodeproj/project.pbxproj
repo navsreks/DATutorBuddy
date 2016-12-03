@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */; };
 		C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94071DEFA80800453A98 /* AppDelegate.swift */; };
 		C2FA940D1DEFA80800453A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FA940B1DEFA80800453A98 /* Main.storyboard */; };
 		C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2FA940E1DEFA80800453A98 /* DATutorBuddy.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2FA94041DEFA80800453A98 /* DATutorBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DATutorBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FA94071DEFA80800453A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2FA940C1DEFA80800453A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				C2FA94071DEFA80800453A98 /* AppDelegate.swift */,
 				C2FA940B1DEFA80800453A98 /* Main.storyboard */,
+				C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */,
 				F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */,
 				F346C5651DF2080500240947 /* AllTuteeViewController.swift */,
 				C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */,
@@ -282,6 +285,7 @@
 				C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */,
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
+				C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */,
 				C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */,
 				F346C5661DF2080500240947 /* AllTuteeViewController.swift in Sources */,
 				C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */,
