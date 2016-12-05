@@ -1,15 +1,22 @@
 //
-//  TutorDetailViewController.swift
+//  AddTuteeViewController.swift
 //  DATutorBuddy
 //
-//  Created by Navya Rekapally on 12/1/16.
+//  Created by Navya Rekapally on 12/5/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
 
 import UIKit
 
-class TutorDetailViewController: UIViewController {
+class AddTuteeViewController: UIViewController {
 
+    @IBOutlet var details: UILabel!
+    @IBOutlet var addLocation: UITextField!
+    @IBOutlet var addClass: UITextField!
+    @IBOutlet var addName: UITextField!
+   
+    var NewTutee : TuteeObject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,4 +39,9 @@ class TutorDetailViewController: UIViewController {
     }
     */
 
+    @IBAction func CancelButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func SaveButton(sender: AnyObject) {
+    }
 }

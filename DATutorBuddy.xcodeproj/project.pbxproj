@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20E21B81DF632FC00E11108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E21B71DF632FC00E11108 /* Main.storyboard */; };
 		C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */; };
+		C2AB7BAA1DF61F330012C06F /* TuteeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA91DF61F330012C06F /* TuteeObject.swift */; };
+		C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */; };
 		C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94071DEFA80800453A98 /* AppDelegate.swift */; };
-		C2FA940D1DEFA80800453A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FA940B1DEFA80800453A98 /* Main.storyboard */; };
 		C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2FA940E1DEFA80800453A98 /* DATutorBuddy.xcdatamodeld */; };
 		C2FA94121DEFA80800453A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2FA94111DEFA80800453A98 /* Assets.xcassets */; };
 		C2FA94151DEFA80800453A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */; };
@@ -19,7 +21,6 @@
 		C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */; };
 		C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */; };
 		C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */; };
-		C2FA94411DF0FB1600453A98 /* TutorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */; };
 		F346C5661DF2080500240947 /* AllTuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346C5651DF2080500240947 /* AllTuteeViewController.swift */; };
 		F346C5681DF2094700240947 /* AllTuteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -42,10 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20E21B71DF632FC00E11108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C2AB7BA91DF61F330012C06F /* TuteeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuteeObject.swift; sourceTree = "<group>"; };
+		C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTuteeViewController.swift; path = ../AddTuteeViewController.swift; sourceTree = "<group>"; };
 		C2FA94041DEFA80800453A98 /* DATutorBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DATutorBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2FA94071DEFA80800453A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2FA940C1DEFA80800453A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2FA940F1DEFA80800453A98 /* DATutorBuddy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DATutorBuddy.xcdatamodel; sourceTree = "<group>"; };
 		C2FA94111DEFA80800453A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2FA94141DEFA80800453A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesTableViewCell.swift; sourceTree = "<group>"; };
 		C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewController.swift; sourceTree = "<group>"; };
 		C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorTableViewCell.swift; sourceTree = "<group>"; };
-		C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorDetailViewController.swift; sourceTree = "<group>"; };
 		F346C5651DF2080500240947 /* AllTuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTuteeViewController.swift; sourceTree = "<group>"; };
 		F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTuteeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,15 +116,16 @@
 			isa = PBXGroup;
 			children = (
 				C2FA94071DEFA80800453A98 /* AppDelegate.swift */,
-				C2FA940B1DEFA80800453A98 /* Main.storyboard */,
 				C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */,
 				F346C5671DF2094700240947 /* AllTuteeTableViewCell.swift */,
 				F346C5651DF2080500240947 /* AllTuteeViewController.swift */,
-				C2FA94401DF0FB1600453A98 /* TutorDetailViewController.swift */,
 				C2FA943C1DEFB5F300453A98 /* TutorTableViewController.swift */,
+				C2AB7BA91DF61F330012C06F /* TuteeObject.swift */,
 				C2FA943E1DEFB60B00453A98 /* TutorTableViewCell.swift */,
 				C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */,
 				C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */,
+				C20E21B71DF632FC00E11108 /* Main.storyboard */,
+				C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */,
 				C2FA94111DEFA80800453A98 /* Assets.xcassets */,
 				C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */,
 				C2FA94161DEFA80800453A98 /* Info.plist */,
@@ -253,9 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20E21B81DF632FC00E11108 /* Main.storyboard in Resources */,
 				C2FA94151DEFA80800453A98 /* LaunchScreen.storyboard in Resources */,
 				C2FA94121DEFA80800453A98 /* Assets.xcassets in Resources */,
-				C2FA940D1DEFA80800453A98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2AB7BAA1DF61F330012C06F /* TuteeObject.swift in Sources */,
 				C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */,
-				C2FA94411DF0FB1600453A98 /* TutorDetailViewController.swift in Sources */,
 				C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */,
+				C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */,
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
 				C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */,
@@ -325,14 +329,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C2FA940B1DEFA80800453A98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C2FA940C1DEFA80800453A98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

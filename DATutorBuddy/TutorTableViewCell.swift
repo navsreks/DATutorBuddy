@@ -10,7 +10,7 @@ import UIKit
 
 class TutorTableViewCell: UITableViewCell {
 
-    @IBOutlet var TutorImage: UIImageView!
+    //@IBOutlet var TutorImage: UIImageView!
     @IBOutlet var TutorTeaching: UILabel!
     @IBOutlet var TutorName: UILabel!
     

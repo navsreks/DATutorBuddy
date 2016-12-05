@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Stj-vQ-QuW">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -101,7 +102,6 @@
                                 <connections>
                                     <outlet property="TutorName" destination="1EB-k3-tFc" id="uPE-TB-ogR"/>
                                     <outlet property="TutorTeaching" destination="ABs-Xt-a2H" id="gtW-mA-3Vy"/>
-                                    <segue destination="psD-ey-BBa" kind="push" identifier="selectTutor" id="5By-9K-zm6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,7 +110,13 @@
                             <outlet property="delegate" destination="u3d-Cr-RJp" id="fVm-0l-Vr8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add yourself to the list" id="QVP-MY-o40"/>
+                    <navigationItem key="navigationItem" title="Add yourself to the list" id="QVP-MY-o40">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7bH-Rq-BHx">
+                            <connections>
+                                <segue destination="psD-ey-BBa" kind="modal" identifier="addTutee" modalTransitionStyle="partialCurl" id="Q8u-Xd-d2d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZT-Xq-egd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +125,7 @@
         <!--Where we can find you?-->
         <scene sceneID="B1t-mz-YkX">
             <objects>
-                <viewController id="psD-ey-BBa" customClass="TutorDetailViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="psD-ey-BBa" customClass="AddTuteeViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rke-4G-tGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="DyY-De-AFo"/>
@@ -160,6 +166,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="CANCEL"/>
+                                <connections>
+                                    <action selector="CancelButton:" destination="psD-ey-BBa" eventType="touchUpInside" id="9Qs-a9-yzt"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="UpT-iX-2bJ">
@@ -168,10 +177,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="SaveButton:" destination="psD-ey-BBa" eventType="touchUpInside" id="12a-IZ-Q07"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addClass" destination="P9N-Cm-4pl" id="H3D-tY-fpt"/>
+                        <outlet property="addLocation" destination="u1S-9q-oWC" id="gn0-69-MO8"/>
+                        <outlet property="addName" destination="BmS-GZ-ff9" id="zf9-oo-Hi9"/>
+                        <outlet property="details" destination="QTX-E6-NFa" id="8bM-qt-ua5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx9-41-NHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
