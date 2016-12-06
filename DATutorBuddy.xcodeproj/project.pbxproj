@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C20E21B81DF632FC00E11108 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E21B71DF632FC00E11108 /* Main.storyboard */; };
+		C20E21BA1DF7726F00E11108 /* ApptTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21B91DF7726F00E11108 /* ApptTableViewController.swift */; };
+		C20E21BC1DF772B300E11108 /* ApptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */; };
+		C20E21BE1DF7732100E11108 /* ApptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BD1DF7732100E11108 /* ApptDetailViewController.swift */; };
+		C20E21C01DF7760300E11108 /* AddApptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BF1DF7760300E11108 /* AddApptViewController.swift */; };
 		C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */; };
 		C2AB7BAA1DF61F330012C06F /* TuteeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA91DF61F330012C06F /* TuteeObject.swift */; };
 		C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */; };
@@ -44,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		C20E21B71DF632FC00E11108 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C20E21B91DF7726F00E11108 /* ApptTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptTableViewController.swift; sourceTree = "<group>"; };
+		C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptTableViewCell.swift; sourceTree = "<group>"; };
+		C20E21BD1DF7732100E11108 /* ApptDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptDetailViewController.swift; sourceTree = "<group>"; };
+		C20E21BF1DF7760300E11108 /* AddApptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddApptViewController.swift; sourceTree = "<group>"; };
 		C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2AB7BA91DF61F330012C06F /* TuteeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuteeObject.swift; sourceTree = "<group>"; };
 		C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTuteeViewController.swift; path = ../AddTuteeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,10 @@
 				C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */,
 				C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */,
 				C20E21B71DF632FC00E11108 /* Main.storyboard */,
+				C20E21BF1DF7760300E11108 /* AddApptViewController.swift */,
+				C20E21B91DF7726F00E11108 /* ApptTableViewController.swift */,
+				C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */,
+				C20E21BD1DF7732100E11108 /* ApptDetailViewController.swift */,
 				C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */,
 				C2FA94111DEFA80800453A98 /* Assets.xcassets */,
 				C2FA94131DEFA80800453A98 /* LaunchScreen.storyboard */,
@@ -285,15 +297,19 @@
 			files = (
 				C2AB7BAA1DF61F330012C06F /* TuteeObject.swift in Sources */,
 				C2FA943D1DEFB5F300453A98 /* TutorTableViewController.swift in Sources */,
+				C20E21C01DF7760300E11108 /* AddApptViewController.swift in Sources */,
 				C2FA94101DEFA80800453A98 /* DATutorBuddy.xcdatamodeld in Sources */,
 				C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */,
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
 				C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */,
 				C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */,
+				C20E21BE1DF7732100E11108 /* ApptDetailViewController.swift in Sources */,
+				C20E21BA1DF7726F00E11108 /* ApptTableViewController.swift in Sources */,
 				F346C5661DF2080500240947 /* AllTuteeViewController.swift in Sources */,
 				C2FA94081DEFA80800453A98 /* AppDelegate.swift in Sources */,
 				F346C5681DF2094700240947 /* AllTuteeTableViewCell.swift in Sources */,
+				C20E21BC1DF772B300E11108 /* ApptTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
