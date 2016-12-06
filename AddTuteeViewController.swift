@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTuteeViewController: UIViewController {
 
-    @IBOutlet var details: UILabel!
-    @IBOutlet var addLocation: UITextField!
-    @IBOutlet var addClass: UITextField!
     @IBOutlet var addName: UITextField!
-   
+    @IBOutlet var addLocation: UITextField!
+    @IBOutlet var addTime: UITextField!
+    var className : String = ""
+    
     var NewTutee : TuteeObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -43,5 +43,30 @@ class AddTuteeViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func SaveButton(sender: AnyObject) {
+//                self.NewTutee?.iName = self.addName.text!
+//                self.NewTutee?.iLocation = self.addLocation.text!
+//                self.NewTutee?.iTime = self.addTime.text!
+//                self.NewTutee?.iClass = self.addClass.text!
+        //NewTutee (TuteeObject(iName: self.addName.text, iTime: self.addTime.text, iLocation: self.addLocation.text, iClass: self.addClass.text))
+        let myMOC = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        NewTutee = NSEntityDescription.insertNewObjectForEntityForName("TuteeObject", inManagedObjectContext: myMOC) as! TuteeObject
+        
+        print(NSStringFromClass(NewTutee.classForCoder))
+        
+        NewTutee.iName = addName.text!
+        NewTutee.iClass = className
+        NewTutee.iTime = addTime.text!
+        NewTutee.iLocation = addLocation.text!
+        
+        do {
+            try myMOC.save()
+            
+        }
+        catch {
+            print(error)
+            return
+            
+        }
     }
 }
