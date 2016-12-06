@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class AddApptViewController: UIViewController {
 
+    @IBOutlet var addpNum: UITextField!
+    @IBOutlet var addEmail: UITextField!
+    @IBOutlet var addTime: UITextField!
+    @IBOutlet var addDate: UITextField!
+    @IBOutlet var addClass: UITextField!
+    @IBOutlet var addName: UITextField!
+    
+    var newAppt : ApptObject!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +42,36 @@ class AddApptViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func Cancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
 
+    }
+
+    @IBAction func Save(sender: AnyObject) {
+        let mymanagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        newAppt = NSEntityDescription.insertNewObjectForEntityForName("ApptObject", inManagedObjectContext: mymanagedObjectContext) as! ApptObject
+        
+        print(NSStringFromClass(newAppt.classForCoder))
+        
+        newAppt.name = addName.text!
+        newAppt.subject = addClass.text!
+        newAppt.date = addDate.text!
+        newAppt.time = addTime.text!
+        newAppt.email = addEmail.text!
+        newAppt.pNum = addpNum.text!
+
+        newAppt.check = 0
+        
+        do {
+            try mymanagedObjectContext.save()
+            
+        }
+        catch {
+            print(error)
+            return
+            
+        }
+        self.dismissViewControllerAnimated(Bool(true), completion: nil)
+    }
 }

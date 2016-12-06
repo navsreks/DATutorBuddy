@@ -292,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="133" id="yeJ-F8-TCg" customClass="ApptTableViewCell" customModule="DATutorBuddy" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ApptCell" rowHeight="133" id="yeJ-F8-TCg" customClass="ApptTableViewCell" customModule="DATutorBuddy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yeJ-F8-TCg" id="MEg-WD-27p">
@@ -320,7 +320,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="MHT-bp-a7r" kind="push" id="0Zb-sm-kjI"/>
+                                    <outlet property="cellClass" destination="cDG-WO-baY" id="nkT-mq-ph1"/>
+                                    <outlet property="cellDate" destination="TNV-uZ-hfo" id="Gv6-oZ-C1H"/>
+                                    <outlet property="cellName" destination="2L6-1x-RS1" id="Ou8-1f-mbC"/>
+                                    <segue destination="MHT-bp-a7r" kind="push" identifier="ShowApptDetails" id="0Zb-sm-kjI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -331,7 +334,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="1dl-3j-w2Y">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTd-UT-yCf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTd-UT-yCf">
+                            <connections>
+                                <segue destination="zam-uQ-zlq" kind="modal" identifier="AddNewAppt" modalTransitionStyle="crossDissolve" id="euw-Sp-4AI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -408,6 +415,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="19z-at-5Nz"/>
+                    <connections>
+                        <outlet property="class" destination="LjG-w5-AHW" id="dpJ-oE-saI"/>
+                        <outlet property="date" destination="RhN-x3-Qxa" id="vAo-g8-QX2"/>
+                        <outlet property="email" destination="CQM-nI-Mm9" id="BAK-fj-EcN"/>
+                        <outlet property="name" destination="jOd-Zp-eFU" id="Iyz-ek-qfQ"/>
+                        <outlet property="pNum" destination="O38-IB-a41" id="rsJ-Tj-zZ4"/>
+                        <outlet property="subject" destination="LjG-w5-AHW" id="tAk-9t-VjR"/>
+                        <outlet property="time" destination="cgD-1a-WDm" id="qDo-Hh-8IV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ9-hS-QWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -425,14 +441,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn3-Xa-Og5">
-                                <rect key="frame" x="57" y="367" width="46" height="30"/>
-                                <state key="normal" title="Cancle"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-ck-Joo">
-                                <rect key="frame" x="223" y="367" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-jr-Gzb">
                                 <rect key="frame" x="119" y="106" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -463,9 +471,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn3-Xa-Og5">
+                                <rect key="frame" x="57" y="367" width="50" height="30"/>
+                                <state key="normal" title="Cancle"/>
+                                <connections>
+                                    <action selector="Cancel:" destination="zam-uQ-zlq" eventType="touchUpInside" id="dLE-Sn-Iu0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-ck-Joo">
+                                <rect key="frame" x="215" y="367" width="51" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="Save:" destination="zam-uQ-zlq" eventType="touchUpInside" id="e3c-0D-fRt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="addClass" destination="pxi-pn-fsc" id="hU9-mA-zwb"/>
+                        <outlet property="addDate" destination="uKD-Yc-QQI" id="RzX-Ne-Ocw"/>
+                        <outlet property="addEmail" destination="vJ7-S5-NcT" id="vv2-Lr-XXr"/>
+                        <outlet property="addName" destination="NR1-jr-Gzb" id="abz-61-mR3"/>
+                        <outlet property="addTime" destination="a6a-xg-hBF" id="Ffn-wU-vfS"/>
+                        <outlet property="addpNum" destination="uE5-uI-ecI" id="WA9-50-NUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0yi-sE-hY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

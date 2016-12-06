@@ -10,7 +10,11 @@ import UIKit
 
 class ApptTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet var cellDate: UILabel!
+    @IBOutlet var cellClass: UILabel!
+    @IBOutlet var cellName: UILabel!
+
+        override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

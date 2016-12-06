@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+    <entity name="ApptObject" representedClassName="DATutorBuddy.ApptObject" syncable="YES">
+        <attribute name="check" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="TuteeObject" representedClassName="DATutorBuddy.TuteeObject" syncable="YES">
         <attribute name="iClass" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iLocation" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,5 +17,6 @@
     </entity>
     <elements>
         <element name="TuteeObject" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ApptObject" positionX="-54" positionY="18" width="128" height="150"/>
     </elements>
 </model>

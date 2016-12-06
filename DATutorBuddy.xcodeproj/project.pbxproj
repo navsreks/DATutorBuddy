@@ -12,6 +12,7 @@
 		C20E21BC1DF772B300E11108 /* ApptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */; };
 		C20E21BE1DF7732100E11108 /* ApptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BD1DF7732100E11108 /* ApptDetailViewController.swift */; };
 		C20E21C01DF7760300E11108 /* AddApptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21BF1DF7760300E11108 /* AddApptViewController.swift */; };
+		C20E21C21DF7777D00E11108 /* ApptObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E21C11DF7777D00E11108 /* ApptObject.swift */; };
 		C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */; };
 		C2AB7BAA1DF61F330012C06F /* TuteeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BA91DF61F330012C06F /* TuteeObject.swift */; };
 		C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */; };
@@ -52,6 +53,7 @@
 		C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptTableViewCell.swift; sourceTree = "<group>"; };
 		C20E21BD1DF7732100E11108 /* ApptDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptDetailViewController.swift; sourceTree = "<group>"; };
 		C20E21BF1DF7760300E11108 /* AddApptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddApptViewController.swift; sourceTree = "<group>"; };
+		C20E21C11DF7777D00E11108 /* ApptObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApptObject.swift; sourceTree = "<group>"; };
 		C2AB7BA71DF35C8F0012C06F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C2AB7BA91DF61F330012C06F /* TuteeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuteeObject.swift; sourceTree = "<group>"; };
 		C2AB7BAB1DF62F300012C06F /* AddTuteeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTuteeViewController.swift; path = ../AddTuteeViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				C2FA94381DEFA9C600453A98 /* ClassesTableViewController.swift */,
 				C2FA943A1DEFAD8600453A98 /* ClassesTableViewCell.swift */,
 				C20E21B71DF632FC00E11108 /* Main.storyboard */,
+				C20E21C11DF7777D00E11108 /* ApptObject.swift */,
 				C20E21BF1DF7760300E11108 /* AddApptViewController.swift */,
 				C20E21B91DF7726F00E11108 /* ApptTableViewController.swift */,
 				C20E21BB1DF772B300E11108 /* ApptTableViewCell.swift */,
@@ -302,6 +305,7 @@
 				C2AB7BAC1DF62F300012C06F /* AddTuteeViewController.swift in Sources */,
 				C2FA943F1DEFB60B00453A98 /* TutorTableViewCell.swift in Sources */,
 				C2FA94391DEFA9C600453A98 /* ClassesTableViewController.swift in Sources */,
+				C20E21C21DF7777D00E11108 /* ApptObject.swift in Sources */,
 				C2AB7BA81DF35C8F0012C06F /* HomeViewController.swift in Sources */,
 				C2FA943B1DEFAD8600453A98 /* ClassesTableViewCell.swift in Sources */,
 				C20E21BE1DF7732100E11108 /* ApptDetailViewController.swift in Sources */,
