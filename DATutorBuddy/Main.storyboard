@@ -113,7 +113,7 @@
                     <navigationItem key="navigationItem" title="Add yourself to the list" id="QVP-MY-o40">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7bH-Rq-BHx">
                             <connections>
-                                <segue destination="psD-ey-BBa" kind="modal" identifier="addTutee" id="Q8u-Xd-d2d"/>
+                                <segue destination="psD-ey-BBa" kind="modal" identifier="addTutee" modalTransitionStyle="partialCurl" id="Q8u-Xd-d2d"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,17 +135,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u1S-9q-oWC">
-                                <rect key="frame" x="52" y="220" width="228" height="30"/>
+                                <rect key="frame" x="52" y="322" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CURRENT TIME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwO-Ez-cxf">
-                                <rect key="frame" x="52" y="258" width="228" height="30"/>
+                                <rect key="frame" x="52" y="367" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A52-0R-ZF7">
-                                <rect key="frame" x="228" y="318" width="52" height="32"/>
+                                <rect key="frame" x="228" y="424" width="52" height="32"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,7 +155,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7F-x1-A7o">
-                                <rect key="frame" x="58" y="318" width="63" height="30"/>
+                                <rect key="frame" x="52" y="426" width="63" height="30"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,10 +165,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwX-7I-hWP">
-                                <rect key="frame" x="52" y="156" width="228" height="30"/>
+                                <rect key="frame" x="52" y="274" width="228" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIB-d2-VUd">
+                                <rect key="frame" x="52" y="49" width="228" height="185"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -183,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dx9-41-NHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="335"/>
+            <point key="canvasLocation" x="1663" y="335"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="h68-B2-sAl">
@@ -276,24 +283,73 @@
             </objects>
             <point key="canvasLocation" x="-249" y="1262"/>
         </scene>
-        <!--APPT.-->
-        <scene sceneID="kQQ-rI-L5c">
+        <!--Root View Controller-->
+        <scene sceneID="Nft-wL-Hk2">
             <objects>
-                <viewController id="odQ-7l-Okz" sceneMemberID="viewController">
+                <tableViewController id="m5C-Al-mPV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" id="ven-eo-Wnw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="yeJ-F8-TCg">
+                                <rect key="frame" x="0.0" y="92" width="320" height="172"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yeJ-F8-TCg" id="MEg-WD-27p">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="171.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m5C-Al-mPV" id="Noj-nn-DIJ"/>
+                            <outlet property="delegate" destination="m5C-Al-mPV" id="lgT-by-7US"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="1dl-3j-w2Y">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTd-UT-yCf"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g81-km-2Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185" y="2108"/>
+        </scene>
+        <!--APPT.-->
+        <scene sceneID="IuK-vR-EbA">
+            <objects>
+                <navigationController id="4vy-qV-zXZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="APPT." image="appt" id="WQU-au-pOA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XlS-qe-WdW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m5C-Al-mPV" kind="relationship" relationship="rootViewController" id="IGE-vV-yWt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLo-vP-w5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="2107"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RRP-TE-RIT">
+            <objects>
+                <viewController id="MHT-bp-a7r" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zwe-iC-FdJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="AuN-re-vSh"/>
+                        <viewControllerLayoutGuide type="top" id="ReG-Gl-fym"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bwt-61-XXn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IT2-eM-gEA">
+                    <view key="view" contentMode="scaleToFill" id="O7A-sc-VCk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="APPT." image="appt" id="Gj0-lI-kI0"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgm-uO-MlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQ9-hS-QWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="2127"/>
+            <point key="canvasLocation" x="609" y="2116"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="rKs-CS-gTd">
@@ -355,7 +411,7 @@
                     <connections>
                         <segue destination="egS-Dq-b4A" kind="relationship" relationship="viewControllers" id="pyW-hC-1qb"/>
                         <segue destination="5hB-G6-eSy" kind="relationship" relationship="viewControllers" id="fca-Dh-ebw"/>
-                        <segue destination="odQ-7l-Okz" kind="relationship" relationship="viewControllers" id="UcT-pe-umI"/>
+                        <segue destination="4vy-qV-zXZ" kind="relationship" relationship="viewControllers" id="uLy-GC-0e3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXo-qr-j8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
