@@ -9,13 +9,17 @@
 import UIKit
 import CoreData
 
-class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerDelegate  {
+class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NSFetchedResultsControllerDelegate  {
 
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var frc : NSFetchedResultsController!
     
+    var searchController : UISearchController!
+    
     var MyTutee: [TuteeObject] = []
+    
+    var searchResults : [TuteeObject] = []
     
     
     override func viewDidLoad() {
@@ -41,6 +45,12 @@ class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerD
             
         }
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchBar.sizeToFit()
+        self.searchController.hidesNavigationBarDuringPresentation = false;
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        self.tableView.tableHeaderView = self.searchController.searchBar
         
     }
     
@@ -81,6 +91,9 @@ class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerD
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if searchController.active {
+            return searchResults.count
+        }
         return MyTutee.count
     }
     
@@ -93,7 +106,12 @@ class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerD
         
         var student : TuteeObject!
         
-        student = MyTutee[indexPath.row]
+        if searchController.active {
+            student = searchResults[indexPath.row]
+        }
+        else {
+            student = MyTutee[indexPath.row]
+        }
         
         cell.locName?.text = student.iLocation
         cell.name?.text = student.iName
@@ -103,14 +121,39 @@ class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerD
         return cell
     }
     
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if searchController.active {
+            return false
+        }
+        else {
+            // Return false if you do not want the specified item to be editable.
+            return true
+        }
+    }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    func filterContentForSearchText(searchText: String) {
+        searchResults = MyTutee.filter({ (title: TuteeObject) -> Bool in
+//            let nameMatch = title.iName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+//            let timeMatch = title.iTime.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+//            let locMatch = title.iLocation.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            let classMatch = title.iClass.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            
+            return classMatch != nil
+        })
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContentForSearchText(searchText)
+            tableView.reloadData()
+        }
+    }
+    
+    
+    
+    
+    
     
     /*
      // Override to support editing the table view.
