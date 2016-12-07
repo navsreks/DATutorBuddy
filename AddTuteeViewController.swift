@@ -15,7 +15,32 @@ class AddTuteeViewController: UIViewController {
     @IBOutlet var addLocation: UITextField!
     @IBOutlet var addTime: UITextField!
     var className : String = ""
+   /* class Date {
+        let calendar = NSCalendar.currentCalendar()
+        var day: Int {
+            return  calendar.component(.Day, fromDate: NSDate())
+        }
+        var hour: Int {
+            return calendar.component(.Hour, fromDate: NSDate())
+        }
+        var minutes: Int {
+            return calendar.component(.Minute, fromDate:NSDate())
+        }
+    }
+    */
+     let date = NSDate()
+     var calendar = NSCalendar.currentCalendar()
+     var components : Int {
+     return calendar.component([.Hour, .Minute], fromDate: date)
+     }
+     var hour : Int {
+     return calendar.component(.Hour, fromDate: date)
+     }
+     var minute : Int {
+     return calendar.component(.Minute, fromDate: date)
+     }
     
+
     var NewTutee : TuteeObject!
     
     override func viewDidLoad() {
@@ -55,8 +80,11 @@ class AddTuteeViewController: UIViewController {
         print(NSStringFromClass(NewTutee.classForCoder))
         NewTutee.iName = addName.text!
         NewTutee.iClass = className
-        NewTutee.iTime = addTime.text!
+        //NewTutee.iTime = addTime.text!
+        NewTutee.iTime = String(hour) + ":" + String(minute)
         NewTutee.iLocation = addLocation.text!
+        
+
         
         do {
             try myMOC.save()
