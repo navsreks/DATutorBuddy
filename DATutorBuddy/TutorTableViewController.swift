@@ -10,14 +10,8 @@ import UIKit
 import CoreData
 
 class TutorTableViewController: UITableViewController, UISearchResultsUpdating, NSFetchedResultsControllerDelegate {
-    
-//    var Tutee = ["Navya", "Madhura", "Terry", "Urian", "Manish"]
-//    var Location = ["A37", "B32", "D21", "D2", "B15"]
-//    var Time = ["2:00 pm", "1:00 pm", "4:00 pm", "3:00 pm", "1:30 pm"]
-//    //var TutorPic = ["alladin.jpg", "bugsLife.jpg", "beautyAndTheBeast.jpg", "bigHero.jpg", "nemo.jpg"]
-//    var Check = [false, false, false, false, false]
-//    //var test = ["CIS55" : ["Madhura", "name"], "CIS22" : ["Navya"]]
-    var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C"]
+
+    var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C", "CIS35B"]
 
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
@@ -25,15 +19,6 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
 
     var MyTutee: [TuteeObject] = []
 
-    
-//    var MyTutee = [
-//        TuteeObject(iName: "Navya", iLocation: "A37", iTime: "2:00 pm", iClass: "CIS55", iCheck: false ),
-//        TuteeObject(iName: "Madhura", iLocation: "B32", iTime: "1:00 pm", iClass: "CIS22A", iCheck: false ),
-//        TuteeObject(iName: "Terry", iLocation: "D21", iTime: "4:00 pm", iClass: "CIS22B", iCheck: false ),
-//        TuteeObject(iName: "Urian", iLocation: "D2", iTime: "3:00 pm", iClass: "CIS22C", iCheck: false ),
-//        TuteeObject(iName: "Manish", iLocation: "B15", iTime: "1:30 pm", iClass: "CIS35A", iCheck: false )
-//
-//    ]
     var index : Int!
     var searchController : UISearchController!
     var searchResults : [TuteeObject] = []
@@ -117,7 +102,18 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
             return searchResults.count
         }
         else {
-            return MyTutee.count
+            var rowCount = 0
+            
+            for (var i = 0; i < MyTutee.count; i++) {
+                
+                var student : TuteeObject!
+                
+                student = MyTutee[i]
+                if (student.iClass == Classes[index]) {
+                    rowCount = rowCount + 1
+                }
+            }
+            return rowCount
         }
     }
 
@@ -125,23 +121,34 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "TutorsCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TutorTableViewCell
-        
         var student : TuteeObject!
+        
         if searchController.active {
             student = searchResults[indexPath.row]
         }
         else {
             student = MyTutee[indexPath.row]
         }
+        
+        var studentTest : TuteeObject!
+        var nameArr = [String]()
+        var locArr = [String]()
+        
+        for (var i = 0; i < MyTutee.count; i++) {
+            studentTest = MyTutee[i]
+            if (studentTest.iClass == Classes[index]) {
+                nameArr.append(String(studentTest.iName))
+                locArr.append(studentTest.iLocation)
+            }
+        }
+        cell.TutorName?.text = nameArr[indexPath.row]
+        cell.TutorTeaching?.text = locArr[indexPath.row]
 
         
-         //Configure the cell...
-        cell.TutorName?.text = student.iName
-        cell.TutorTeaching?.text = student.iLocation
-      //  cell.TutorImage?.image = UIImage(named: TutorPic[index])
-        cell.alpha = 0
+        cell.accessoryType = UITableViewCellAccessoryType.None
         UIView.animateWithDuration(3, animations: {cell.alpha = 1})
-        
+        cell.alpha = 0
+        //Configure the cell...
         return cell
     }
 
@@ -174,7 +181,6 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
             
         }
         
-        
         self.tableView.reloadData()
         
     }
@@ -202,15 +208,15 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
  // Get the new view controller using segue.destinationViewController.
  // Pass the selected object to the new view controller.
     
-/* segue code no longer needed after adding core data
+/* segue code no longer needed after adding core data */
      if (segue.identifier == "addTutee")
- {
-    var newItem = TuteeObject.self
-    var addViewController = segue.destinationViewController as! AddTuteeViewController
-    addViewController.className = Classes[index]
-    //addViewController.NewTutee = addData
- } */
+     {
+        var newItem = TuteeObject.self
+        var addViewController = segue.destinationViewController as! AddTuteeViewController
+        addViewController.className = Classes[index]
+        //addViewController.NewTutee = addData
     }
+ }
     func addData (newItem: TuteeObject) {
         MyTutee.append(newItem)
     }
