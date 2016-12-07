@@ -7,44 +7,83 @@
 //
 
 import UIKit
+import CoreData
 
-class AllTuteeViewController: UITableViewController {
-    
-    let demoArray = ["Madhura", "Navya", "Terry", "Urian"]
-    
-    let classArray = ["CIS55", "CIS22A", "CIS22B", "CIS22C"]
-    
-    let locArr = ["M26", "N30", "B20", "D15" ]
-    
-    let timeArr = ["10.30 am", "11.00 am", "2.12 pm", "4.40 pm"]
+class AllTuteeViewController: UITableViewController, NSFetchedResultsControllerDelegate  {
 
+    let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var frc : NSFetchedResultsController!
+    
+    var MyTutee: [TuteeObject] = []
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let fr = NSFetchRequest(entityName: "TuteeObject")
+        
+        let sd = NSSortDescriptor(key: "iTime", ascending: true)
+        fr.sortDescriptors = [sd]
+        
+        frc = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = self
+        
+        
+        do {
+            try frc.performFetch()
+            MyTutee = frc.fetchedObjects as! [TuteeObject]
+            
+        }
+        catch {
+            print(error)
+            return
+            
+        }
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        let fr = NSFetchRequest(entityName: "TuteeObject")
+        
+        let sd = NSSortDescriptor(key: "iTime", ascending: true)
+        fr.sortDescriptors = [sd]
+        
+        frc = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = self
+        
+        
+        do {
+            try frc.performFetch()
+            MyTutee = frc.fetchedObjects as! [TuteeObject]
+            
+        }
+        catch {
+            print(error)
+            return
+            
+        }
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return demoArray.count
+        return MyTutee.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -52,58 +91,62 @@ class AllTuteeViewController: UITableViewController {
         let cellIdentifier = "TuteeCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AllTuteeTableViewCell
         
-        cell.locName?.text = locArr[indexPath.row]
-        cell.name?.text = demoArray[indexPath.row]
-        cell.className?.text = classArray[indexPath.row]
-        cell.time?.text = timeArr[indexPath.row]
+        var student : TuteeObject!
+        
+        student = MyTutee[indexPath.row]
+        
+        cell.locName?.text = student.iLocation
+        cell.name?.text = student.iName
+        cell.className?.text = student.iClass
+        cell.time?.text = student.iTime
         
         return cell
     }
     
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+     if editingStyle == .Delete {
+     // Delete the row from the data source
+     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+     } else if editingStyle == .Insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

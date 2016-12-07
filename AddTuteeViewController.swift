@@ -53,7 +53,6 @@ class AddTuteeViewController: UIViewController {
         NewTutee = NSEntityDescription.insertNewObjectForEntityForName("TuteeObject", inManagedObjectContext: myMOC) as! TuteeObject
         
         print(NSStringFromClass(NewTutee.classForCoder))
-        
         NewTutee.iName = addName.text!
         NewTutee.iClass = className
         NewTutee.iTime = addTime.text!
@@ -68,5 +67,6 @@ class AddTuteeViewController: UIViewController {
             return
             
         }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

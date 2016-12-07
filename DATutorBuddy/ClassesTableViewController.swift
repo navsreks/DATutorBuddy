@@ -10,9 +10,9 @@ import UIKit
 
 class ClassesTableViewController: UITableViewController {
 
-    var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C"]
-    var Description = ["iOS Development", "Java", "Beginning C++", "Intermediate C++", "Data Structures"]
-    var Check = [false, false, false, false, false]
+    var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C", "CIS35B"]
+    var Description = ["iOS Development", "Java", "Beginning C++", "Intermediate C++", "Data Structures", "Beginning Java"]
+    var Check = [false, false, false, false, false, false]
     var cellIndex : Int!
 
     
