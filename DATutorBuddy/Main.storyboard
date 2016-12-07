@@ -30,7 +30,7 @@
                                             <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udX-4a-CzV">
-                                            <rect key="frame" x="31" y="46" width="224" height="37"/>
+                                            <rect key="frame" x="31" y="49" width="224" height="37"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="21"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,19 +83,19 @@
                                             <rect key="frame" x="154" y="9" width="117" height="32"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date/Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tib-XN-CWA">
                                             <rect key="frame" x="154" y="49" width="117" height="32"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-Xt-a2H">
                                             <rect key="frame" x="21" y="0.0" width="125" height="90"/>
                                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="37"/>
                                             <color key="textColor" red="0.95590641359999995" green="0.30845944320000002" blue="0.28414540519999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -147,7 +147,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7F-x1-A7o">
                                 <rect key="frame" x="52" y="388" width="63" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -164,7 +166,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A52-0R-ZF7">
                                 <rect key="frame" x="228" y="388" width="52" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -212,27 +216,31 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-cx-fhf">
                                             <rect key="frame" x="182" y="30" width="138" height="30"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Fx-Spf">
-                                            <rect key="frame" x="182" y="60" width="138" height="30"/>
-                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-EV-KTl">
-                                            <rect key="frame" x="182" y="0.0" width="138" height="30"/>
-                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-ku-cdu">
                                             <rect key="frame" x="24" y="0.0" width="150" height="90"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="37"/>
                                             <color key="textColor" red="0.95590641361256545" green="0.30845944323414487" blue="0.28414540515516734" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Fx-Spf">
+                                            <rect key="frame" x="182" y="60" width="138" height="30"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuI-EV-KTl">
+                                            <rect key="frame" x="182" y="0.0" width="138" height="30"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -290,21 +298,24 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-1x-RS1">
                                             <rect key="frame" x="177" y="0.0" width="112" height="40"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDG-WO-baY">
                                             <rect key="frame" x="177" y="45" width="112" height="40"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-uZ-hfo">
                                             <rect key="frame" x="18" y="0.0" width="151" height="90"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="27"/>
                                             <color key="textColor" red="0.95590641359999995" green="0.30845944320000002" blue="0.28414540519999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="highlightedColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -352,7 +363,7 @@
             </objects>
             <point key="canvasLocation" x="-249" y="1731"/>
         </scene>
-        <!--Appt Detail View Controller-->
+        <!--Appointment Details-->
         <scene sceneID="RRP-TE-RIT">
             <objects>
                 <viewController id="MHT-bp-a7r" customClass="ApptDetailViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -412,7 +423,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="19z-at-5Nz"/>
+                    <navigationItem key="navigationItem" title="Appointment Details" id="19z-at-5Nz"/>
                     <connections>
                         <outlet property="date" destination="RhN-x3-Qxa" id="vAo-g8-QX2"/>
                         <outlet property="email" destination="CQM-nI-Mm9" id="BAK-fj-EcN"/>
@@ -464,8 +475,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn3-Xa-Og5">
                                 <rect key="frame" x="50" y="394" width="55" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Cancle">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -475,7 +487,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-ck-Joo">
                                 <rect key="frame" x="224" y="394" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -532,7 +546,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-am-Y4i">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-am-Y4i">
                                 <rect key="frame" x="0.0" y="-31" width="320" height="599"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="WELCOME TO                       DA TUTOR BUDDY" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l5-MA-N3a">
@@ -557,7 +571,11 @@
                             <constraint firstItem="0l5-MA-N3a" firstAttribute="leading" secondItem="2qJ-E5-gUM" secondAttribute="leadingMargin" constant="26" id="01T-vF-PZv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0l5-MA-N3a" secondAttribute="trailing" constant="25" id="53U-is-uWb"/>
                             <constraint firstItem="UOO-9I-H45" firstAttribute="leading" secondItem="2qJ-E5-gUM" secondAttribute="leadingMargin" constant="85" id="DNQ-Q6-VWk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rfh-am-Y4i" secondAttribute="trailing" constant="-20" id="E9G-Ig-ns3"/>
                             <constraint firstItem="UOO-9I-H45" firstAttribute="top" secondItem="0l5-MA-N3a" secondAttribute="bottom" constant="102" id="Pil-8c-EWX"/>
+                            <constraint firstItem="enb-Uc-b35" firstAttribute="top" secondItem="Rfh-am-Y4i" secondAttribute="bottom" id="R7R-bz-uHx"/>
+                            <constraint firstItem="Rfh-am-Y4i" firstAttribute="top" secondItem="2qJ-E5-gUM" secondAttribute="topMargin" constant="-31" id="Zdj-kJ-Vn8"/>
+                            <constraint firstItem="Rfh-am-Y4i" firstAttribute="leading" secondItem="2qJ-E5-gUM" secondAttribute="leadingMargin" constant="-20" id="bLR-9H-cZS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UOO-9I-H45" secondAttribute="trailing" constant="84" id="iF5-Wb-g0z"/>
                         </constraints>
                     </view>

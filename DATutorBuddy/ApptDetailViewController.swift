@@ -21,6 +21,9 @@ class ApptDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController!.navigationBar.tintColor = UIColor(red: 0.1529, green: 0.4902, blue: 0.5569, alpha: 1.0);
+
 
         // Do any additional setup after loading the view.
         self.name.text = "Name: " + self.ApptDetail.name

@@ -25,7 +25,7 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Add to WaitList"
+        self.navigationItem.title = "Class Waitlist"
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0.1529, green: 0.4902, blue: 0.5569, alpha: 1.0)]
         
         let fr = NSFetchRequest(entityName: "TuteeObject")
