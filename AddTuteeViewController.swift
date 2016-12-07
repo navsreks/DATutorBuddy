@@ -68,5 +68,6 @@ class AddTuteeViewController: UIViewController {
             return
             
         }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

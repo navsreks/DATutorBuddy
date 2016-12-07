@@ -201,13 +201,15 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
  // Pass the selected object to the new view controller.
  // Get the new view controller using segue.destinationViewController.
  // Pass the selected object to the new view controller.
- if (segue.identifier == "addTutee")
+    
+/* segue code no longer needed after adding core data
+     if (segue.identifier == "addTutee")
  {
     var newItem = TuteeObject.self
     var addViewController = segue.destinationViewController as! AddTuteeViewController
     addViewController.className = Classes[index]
     //addViewController.NewTutee = addData
- }
+ } */
     }
     func addData (newItem: TuteeObject) {
         MyTutee.append(newItem)
