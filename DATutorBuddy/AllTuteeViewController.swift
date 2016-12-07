@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NSFetchedResultsControllerDelegate  {
-
+    
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var frc : NSFetchedResultsController!
@@ -55,9 +55,6 @@ class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NS
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.navigationItem.title = "WaitList"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 0.1529, green: 0.4902, blue: 0.5569, alpha: 1.0)]
-        
         let fr = NSFetchRequest(entityName: "TuteeObject")
         
         let sd = NSSortDescriptor(key: "iTime", ascending: true)
@@ -77,6 +74,15 @@ class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NS
             return
             
         }
+        //let textFieldInsideUISearchBarLabel = textFieldInsideUISearchBar!.valueForKey("Search by Class") as? UILabel
+        //textFieldInsideUISearchBarLabel?.textColor = UIColor.whiteColor()
+        
+        //SearchBar Placeholder
+        
+        let searchBar = UISearchBar()
+        
+        self.searchController.searchBar.placeholder = "Search by Class"
+        
         self.tableView.reloadData()
     }
     
@@ -137,9 +143,9 @@ class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NS
     
     func filterContentForSearchText(searchText: String) {
         searchResults = MyTutee.filter({ (title: TuteeObject) -> Bool in
-//            let nameMatch = title.iName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-//            let timeMatch = title.iTime.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-//            let locMatch = title.iLocation.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            //            let nameMatch = title.iName.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            //            let timeMatch = title.iTime.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            //            let locMatch = title.iLocation.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             let classMatch = title.iClass.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             
             return classMatch != nil

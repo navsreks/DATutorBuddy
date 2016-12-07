@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TutorTableViewController: UITableViewController, UISearchResultsUpdating, NSFetchedResultsControllerDelegate {
+class TutorTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var Classes = ["CIS 55", "CIS 35A", "CIS 22A", "CIS 22B", "CIS 22C", "CIS35B"]
 
@@ -55,12 +55,6 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
         
         //print(index)
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        self.searchController = UISearchController(searchResultsController: nil)
-        self.searchController.searchBar.sizeToFit()
-        self.searchController.hidesNavigationBarDuringPresentation = false;
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        self.tableView.tableHeaderView = self.searchController.searchBar
         
     }
     
@@ -101,23 +95,18 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if searchController.active {
-            return searchResults.count
-        }
-        else {
-            var rowCount = 0
+        var rowCount = 0
             
-            for (var i = 0; i < MyTutee.count; i++) {
+        for (var i = 0; i < MyTutee.count; i++) {
                 
-                var student : TuteeObject!
+            var student : TuteeObject!
                 
-                student = MyTutee[i]
-                if (student.iClass == Classes[index]) {
-                    rowCount = rowCount + 1
-                }
+            student = MyTutee[i]
+            if (student.iClass == Classes[index]) {
+                rowCount = rowCount + 1
             }
-            return rowCount
         }
+        return rowCount
     }
 
 
@@ -126,12 +115,7 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TutorTableViewCell
         var student : TuteeObject!
         
-        if searchController.active {
-            student = searchResults[indexPath.row]
-        }
-        else {
-            student = MyTutee[indexPath.row]
-        }
+        student = MyTutee[indexPath.row]
         
         var studentTest : TuteeObject!
         var nameArr = [String]()
@@ -158,17 +142,6 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
         return cell
     }
 
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if searchController.active {
-            return false
-        }
-        else {
-            // Return false if you do not want the specified item to be editable.
-            return true
-        }
-    }
-
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -188,7 +161,6 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
         }
         
         self.tableView.reloadData()
-        
     }
 
     /*
