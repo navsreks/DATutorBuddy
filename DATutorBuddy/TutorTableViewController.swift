@@ -133,16 +133,19 @@ class TutorTableViewController: UITableViewController, UISearchResultsUpdating, 
         var studentTest : TuteeObject!
         var nameArr = [String]()
         var locArr = [String]()
+        var dateArr = [String]()
         
         for (var i = 0; i < MyTutee.count; i++) {
             studentTest = MyTutee[i]
             if (studentTest.iClass == Classes[index]) {
                 nameArr.append(String(studentTest.iName))
                 locArr.append(studentTest.iLocation)
+                dateArr.append(studentTest.iTime)
             }
         }
         cell.TutorName?.text = nameArr[indexPath.row]
         cell.TutorTeaching?.text = locArr[indexPath.row]
+        cell.TutorTime?.text = dateArr[indexPath.row]
 
         
         cell.accessoryType = UITableViewCellAccessoryType.None
