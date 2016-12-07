@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="327"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Complete List-->
         <scene sceneID="h68-B2-sAl">
             <objects>
-                <tableViewController id="xSj-Gn-Y53" customClass="AllTuteeViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Complete List" id="xSj-Gn-Y53" customClass="AllTuteeViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="145" sectionHeaderHeight="28" sectionFooterHeight="28" id="KLQ-Vj-NT3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
                             <outlet property="delegate" destination="xSj-Gn-Y53" id="y1f-aH-Nd8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="SPh-md-n6f"/>
+                    <navigationItem key="navigationItem" title="Complete List" id="SPh-md-n6f"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68i-my-RUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,7 +288,7 @@
             <objects>
                 <tableViewController title="Future Appointments" id="m5C-Al-mPV" customClass="ApptTableViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" id="ven-eo-Wnw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -333,14 +333,14 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1dl-3j-w2Y">
+                    <navigationItem key="navigationItem" title="Future Appointments" id="1dl-3j-w2Y">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTd-UT-yCf">
                             <connections>
                                 <segue destination="zam-uQ-zlq" kind="modal" identifier="AddNewAppt" modalTransitionStyle="crossDissolve" id="euw-Sp-4AI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g81-km-2Fy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -372,7 +372,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Bwt-61-XXn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O7A-sc-VCk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOd-Zp-eFU">
@@ -553,6 +553,8 @@
             <objects>
                 <tabBarController id="ibE-hZ-Ht0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="DKX-uo-eVo"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="N5p-Xc-PVT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -594,4 +596,5 @@
         <image name="class" width="35" height="35"/>
         <image name="clkist" width="35" height="35"/>
     </resources>
+    <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
