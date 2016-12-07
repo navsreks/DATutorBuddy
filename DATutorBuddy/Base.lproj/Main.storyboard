@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Which class do you need help in?-->
+        <!--Classes Table View Controller-->
         <scene sceneID="3be-Nz-Q4p">
             <objects>
                 <tableViewController id="dVd-48-id7" customClass="ClassesTableViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,13 +56,13 @@
                             <outlet property="delegate" destination="dVd-48-id7" id="JgC-ud-6ys"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Which class do you need help in?" id="cL2-Wm-B5T"/>
+                    <navigationItem key="navigationItem" id="cL2-Wm-B5T"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcm-aG-lky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="403" y="335"/>
         </scene>
-        <!--Add yourself to the list-->
+        <!--Tutor Table View Controller-->
         <scene sceneID="ADi-8I-7D3">
             <objects>
                 <tableViewController id="u3d-Cr-RJp" customClass="TutorTableViewController" customModule="DATutorBuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                             <outlet property="delegate" destination="u3d-Cr-RJp" id="fVm-0l-Vr8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add yourself to the list" id="QVP-MY-o40"/>
+                    <navigationItem key="navigationItem" id="QVP-MY-o40"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZT-Xq-egd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
