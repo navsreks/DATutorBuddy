@@ -81,6 +81,12 @@ class ApptTableViewController: UITableViewController, UISearchResultsUpdating, N
             return
             
         }
+        //SearchBar Placeholder text
+        
+        let searchBar = UISearchBar()
+        
+        self.searchController.searchBar.placeholder = "Search by Class"
+
         self.tableView.reloadData()
     }
     
@@ -126,7 +132,7 @@ class ApptTableViewController: UITableViewController, UISearchResultsUpdating, N
 
         
         cell.alpha = 0
-        UIView.animateWithDuration(3, animations: {cell.alpha = 1})
+        UIView.animateWithDuration(2, animations: {cell.alpha = 1})
         return cell
         
     }

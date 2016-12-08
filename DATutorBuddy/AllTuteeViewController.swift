@@ -77,7 +77,7 @@ class AllTuteeViewController: UITableViewController, UISearchResultsUpdating, NS
         //let textFieldInsideUISearchBarLabel = textFieldInsideUISearchBar!.valueForKey("Search by Class") as? UILabel
         //textFieldInsideUISearchBarLabel?.textColor = UIColor.whiteColor()
         
-        //SearchBar Placeholder
+        //SearchBar Placeholder text
         
         let searchBar = UISearchBar()
         

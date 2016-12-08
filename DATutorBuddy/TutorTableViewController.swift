@@ -136,7 +136,7 @@ class TutorTableViewController: UITableViewController, NSFetchedResultsControlle
 
         
         cell.accessoryType = UITableViewCellAccessoryType.None
-        UIView.animateWithDuration(3, animations: {cell.alpha = 1})
+        UIView.animateWithDuration(2, animations: {cell.alpha = 1})
         cell.alpha = 0
         //Configure the cell...
         return cell
