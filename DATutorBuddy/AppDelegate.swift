@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  DATutorBuddy
 //
-//  Created by Navya Rekapally on 11/30/16.
+//  Created by Navya Rekapally, Madhura Bhat, Urian Chang, Terry Tzeng on 11/30/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
 

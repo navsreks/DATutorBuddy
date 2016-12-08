@@ -2,7 +2,7 @@
 //  AllTuteeTableViewCell.swift
 //  DATutorBuddy
 //
-//  Created by Madhura  Bhat on 12/2/16.
+//  Created by Navya Rekapally, Madhura Bhat, Urian Chang, Terry Tzeng on 12/2/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
 

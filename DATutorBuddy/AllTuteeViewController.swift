@@ -2,7 +2,7 @@
 //  AllTuteeViewController.swift
 //  DATutorBuddy
 //
-//  Created by Madhura  Bhat on 12/2/16.
+//  Created by Madhura  Bhat, Navya Rekapally, Urian Chang, Terry Tzeng on 12/2/16.
 //  Copyright © 2016 DeAnza. All rights reserved.
 //
 
