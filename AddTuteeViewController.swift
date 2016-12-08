@@ -77,6 +77,34 @@ class AddTuteeViewController: UIViewController {
         
         NewTutee = NSEntityDescription.insertNewObjectForEntityForName("TuteeObject", inManagedObjectContext: myMOC) as! TuteeObject
         
+        if(addName.text == "" || addLocation.text == "") {
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Please fill in both your Name and Seat Location.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else if(addName.text!.characters.count > 10){
+         
+         let alertController = UIAlertController(title: "Alert!!!", message:
+         "Please enter a nickname if your name exceeds 10 characters. Thank you.", preferredStyle: UIAlertControllerStyle.Alert)
+         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+         
+         self.presentViewController(alertController, animated: true, completion: nil)
+         
+         }
+        else if(addLocation.text!.characters.count > 4){
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Use last 3 characters of your Seat Location. Example: If sticker on monitor reads ATC203-M01, enter only M01.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+        else{
+        
         print(NSStringFromClass(NewTutee.classForCoder))
         NewTutee.iName = addName.text!
         NewTutee.iClass = className
@@ -84,17 +112,16 @@ class AddTuteeViewController: UIViewController {
         NewTutee.iTime = String(hour) + ":" + String(minute)
         NewTutee.iLocation = addLocation.text!
         
-
-        
-        do {
-            try myMOC.save()
-            
+            do {
+                try myMOC.save()
+                
+            }
+            catch {
+                print(error)
+                return
+                
+            }
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
-        catch {
-            print(error)
-            return
-            
-        }
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

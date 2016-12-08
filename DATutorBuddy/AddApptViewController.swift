@@ -52,26 +52,63 @@ class AddApptViewController: UIViewController {
         
         newAppt = NSEntityDescription.insertNewObjectForEntityForName("ApptObject", inManagedObjectContext: mymanagedObjectContext) as! ApptObject
         
-        print(NSStringFromClass(newAppt.classForCoder))
-        
-        newAppt.name = addName.text!
-        newAppt.subject = addClass.text!
-        newAppt.date = addDate.text!
-        newAppt.time = addTime.text!
-        newAppt.email = addEmail.text!
-        newAppt.pNum = addpNum.text!
+        if(addName.text == "" || addClass.text == "" || addDate.text == "" || addEmail.text == "" || addTime.text == "") {
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Only phone number is optional. Please fill in all other information.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else if(addName.text!.characters.count > 10){
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Please enter a nickname if your name exceeds 10 characters. Thank you.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+        else if(addDate.text!.characters.count > 7){
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Please enter date in mo/day format. Example: January 31 as 01/31", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
 
-        newAppt.check = 0
-        
-        do {
-            try mymanagedObjectContext.save()
+        else if(addClass.text!.characters.count > 7){
+            
+            let alertController = UIAlertController(title: "Alert!!!", message:
+                "Use class code for Class Name. Example: If class is CIS22A Beginning C++, enter only CIS22A.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
             
         }
-        catch {
-            print(error)
-            return
+        else{
             
-        }
-        self.dismissViewControllerAnimated(Bool(true), completion: nil)
+            print(NSStringFromClass(newAppt.classForCoder))
+            newAppt.name = addName.text!
+            newAppt.subject = addClass.text!
+            newAppt.date = addDate.text!
+            newAppt.time = addTime.text!
+            newAppt.email = addEmail.text!
+            newAppt.pNum = addpNum.text!
+            
+            newAppt.check = 0
+            
+            do {
+                try mymanagedObjectContext.save()
+            }
+            catch {
+                print(error)
+                return
+                
+            }
+            self.dismissViewControllerAnimated(Bool(true), completion: nil)
     }
+}
 }
